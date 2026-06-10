@@ -1,0 +1,461 @@
+/* =====================================================
+   عمران التعليم - ملف التصميم الرئيسي
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* الألوان الأساسية */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --light-bg: #f8f9ff;
+    --dark-text: #333;
+    --light-text: #666;
+}
+
+/* الخط والنصوص */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--dark-text);
+}
+
+/* حاوية رئيسية */
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* الرأس (Header) */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.logo h2 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
+/* القسم الرئيسي (Main) */
+main {
+    text-align: center;
+}
+
+/* قسم الترحيب */
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+.welcome-text {
+    font-size: 1.2em;
+    color: var(--dark-text);
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.welcome-text-it {
+    font-size: 1em;
+    color: var(--light-text);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.subtitle-it {
+    font-size: 0.95em;
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* ميزات الموقع */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.feature {
+    background: var(--light-bg);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+    border-color: var(--secondary-color);
+}
+
+.feature .icon {
+    font-size: 2.5em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 0.9em;
+    color: var(--dark-text);
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.feature .feature-it {
+    color: var(--light-text);
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/* الأزرار */
+.btn-start {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    width: calc(100% - 20px);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-start:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-start:active {
+    transform: scale(0.98);
+}
+
+.btn-start-it {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    width: calc(100% - 20px);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+    font-style: italic;
+}
+
+.btn-start-it:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(240, 147, 251, 0.4);
+}
+
+.btn-start-it:active {
+    transform: scale(0.98);
+}
+
+/* التذييل (Footer) */
+footer {
+    margin-top: 30px;
+    border-top: 2px solid var(--light-bg);
+    padding-top: 20px;
+    color: var(--light-text);
+    font-size: 0.95em;
+}
+
+footer p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* صفحة الدروس */
+.lesson-page {
+    max-width: 700px;
+}
+
+.lesson-content {
+    margin-top: 30px;
+}
+
+/* زر الرجوع */
+.btn-back {
+    background: var(--light-bg);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    float: left;
+}
+
+.btn-back:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* صناديق الدروس */
+.letter-box,
+.pronunciation-box,
+.words-box,
+.story-box,
+.value-box {
+    background: var(--light-bg);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.story-box,
+.value-box {
+    border-left-color: var(--secondary-color);
+}
+
+.label {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.big-letter {
+    font-size: 4em;
+    color: var(--primary-color);
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+#letterName {
+    font-size: 1.3em;
+    color: var(--dark-text);
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+#letterNameIt {
+    font-size: 1.1em;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+/* النطق */
+#pronunciation {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin: 10px 0;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* زر الصوت */
+.btn-sound {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-sound:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* الكلمات */
+#wordsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.word-card {
+    background: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.word-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.word-card h3 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.word-card p {
+    margin: 5px 0;
+    color: var(--light-text);
+    font-size: 0.95em;
+}
+
+/* القصة والقيمة */
+#storyAr,
+#valueAr {
+    color: var(--dark-text);
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 10px 0;
+    text-align: center;
+}
+
+#storyIt,
+#valueIt {
+    color: var(--light-text);
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin: 10px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+/* التنقل */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.btn-nav {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-nav:active {
+    transform: scale(0.98);
+}
+
+/* الاستجابة للهواتف */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+    
+    .logo h1 {
+        font-size: 2em;
+    }
+    
+    .logo h2 {
+        font-size: 1.2em;
+    }
+    
+    .welcome-text {
+        font-size: 1.1em;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .big-letter {
+        font-size: 3em;
+    }
+    
+    .btn-start,
+    .btn-start-it {
+        padding: 12px 30px;
+        font-size: 1em;
+        width: calc(100% - 15px);
+        margin: 8px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+    
+    .btn-nav {
+        padding: 15px 20px;
+    }
+}
+
+/* الاستجابة للشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .container {
+        padding: 40px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
